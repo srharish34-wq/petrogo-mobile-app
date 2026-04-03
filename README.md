@@ -1,2 +1,2 @@
 # petrogo-mobile-app
-PetroGo is an on-demand fuel delivery mobile application designed to provide safe, efficient, and convenient fuel services to users in real time.
+PetroGo is an innovative on-demand fuel delivery mobile app that brings fuel directly to your doorstep, anytime and anywhere. Designed for convenience and efficiency, it combines real-time tracking, seamless ordering, and secure payments to deliver a hassle-free experience. PetroGo reimagines traditional fuel access by saving time, reducing effort, and providing a smarter, faster way to stay fueled in today’s busy world. 
