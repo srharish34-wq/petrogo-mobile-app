@@ -1,0 +1,199 @@
+/**
+ * Tailwind CSS
+ * Location: bunk/src/styles/tailwind.css
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tailwind Utilities */
+@layer utilities {
+  /* Orange Gradient */
+  .bg-gradient-orange {
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Green Gradient */
+  .bg-gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+
+  /* Blue Gradient */
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  }
+
+  /* Red Gradient */
+  .bg-gradient-red {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  }
+
+  /* Purple Gradient */
+  .bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  }
+
+  /* Glassmorphism */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Custom Scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Hide Scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Text Shadow */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Safe Area */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Custom Tailwind Components */
+@layer components {
+  /* Button Variants */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-orange-500 to-red-600 text-white hover:shadow-lg focus:ring-orange-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+
+  .btn-success {
+    @apply btn bg-green-500 text-white hover:bg-green-600 focus:ring-green-500;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-orange-500 text-orange-500 hover:bg-orange-50 focus:ring-orange-500;
+  }
+
+  /* Card */
+  .card-base {
+    @apply bg-white rounded-2xl shadow-md p-6;
+  }
+
+  .card-hover {
+    @apply card-base transition-shadow duration-200 hover:shadow-lg;
+  }
+
+  /* Input */
+  .input-base {
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg transition-all duration-200 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-200;
+  }
+
+  .input-error {
+    @apply input-base border-red-500 bg-red-50 focus:border-red-600 focus:ring-red-200;
+  }
+
+  /* Badge */
+  .badge-base {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-bold;
+  }
+
+  .badge-orange {
+    @apply badge-base bg-orange-100 text-orange-800 border border-orange-300;
+  }
+
+  .badge-green {
+    @apply badge-base bg-green-100 text-green-800 border border-green-300;
+  }
+
+  .badge-blue {
+    @apply badge-base bg-blue-100 text-blue-800 border border-blue-300;
+  }
+
+  .badge-red {
+    @apply badge-base bg-red-100 text-red-800 border border-red-300;
+  }
+
+  .badge-yellow {
+    @apply badge-base bg-yellow-100 text-yellow-800 border border-yellow-300;
+  }
+
+  /* Alert */
+  .alert-base {
+    @apply rounded-lg p-4 border-l-4;
+  }
+
+  .alert-success {
+    @apply alert-base bg-green-50 border-green-500 text-green-800;
+  }
+
+  .alert-error {
+    @apply alert-base bg-red-50 border-red-500 text-red-800;
+  }
+
+  .alert-warning {
+    @apply alert-base bg-yellow-50 border-yellow-500 text-yellow-800;
+  }
+
+  .alert-info {
+    @apply alert-base bg-blue-50 border-blue-500 text-blue-800;
+  }
+}
