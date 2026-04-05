@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -17,13 +16,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.abiramdev.petrogomobile"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+ 
+    "extra": {
+      "eas": {
+        "projectId": "c3bbbb8f-d96e-4632-bfa9-3cd909c5bcc6"
+      }
+    },
+    "owner": "harishseetharaman"
   }
 }
